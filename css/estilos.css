@@ -1,7 +1,13 @@
 /*agregar tipo de fuente*/
 body{
   background: #02010a;
+  animation: body-animation 2s;
 }
+
+img{
+    box-shadow:0 0 5px 2px #02010a;
+}
+
 #cabecera{
   background-color: #5b7989;
   border-radius: 10px;
@@ -23,7 +29,6 @@ body{
 #cabecera img{
   width: 100px;
   border-radius: 10px;
-  box-shadow: 0 0 5px 2px #02010a;
 }
 #menu{
   padding:0 1%;
@@ -60,7 +65,6 @@ body{
 #imagen_secundaria div{
   width: 40%;
   margin: 5%;
-
 }
 
 #imagen_secundaria img{
@@ -69,9 +73,6 @@ body{
   border: 1px solid #d5c75f;
 }
 
-.img_secundaria1 a {
-
-}
 
 .img_secundaria1 a :hover{
     transform: rotate(10deg);
@@ -100,17 +101,16 @@ flex: 1;
 .contenedor_galeria{
   width: 90%;
   margin: auto;
-  padding-top: 50px;
+  padding: 50px 0;
   display: flex;
   flex-wrap: wrap;
 }
+
 .contenedor_galeria>div{
-  flex: 1;
-}
-.contenedor_galeria>div>div{
   width: 350px;
   height: 220px;
-  margin-bottom: 10px;
+  margin: auto;
+  padding: 50px 0;
 }
 
 .contenedor_galeria img{
@@ -118,13 +118,71 @@ flex: 1;
   height: 100%;
 }
 
-.imagen1 img {
+.contenedor_galeria div:nth-child(1) img {
   -webkit-filter: blur(10px);
   filter: blur(10px);
 }
 
+.contenedor_galeria div:nth-child(even) img{
+  -webkit-filter:grayscale(100%);
+  filter:grayscale(100%);
+}
 
-@media (max-width:900px) {
+.contenedor_galeria div:nth-child(3) img{
+  -webkit-filter: sepia(90%);
+  filter:sepia(90%);
+}
+
+@-webkit-keyframes body-animation{
+  0%{
+    margin-top: 150%;
+  }
+  60%{
+    margin-top: -5%;
+  }
+  100%{
+    margin-top: 0%;
+  }
+}
+
+@media (max-width:400px) {
+  #contenido{
+      width: 100%;
+    }
+
+    #cabecera{
+      display: block;
+    }
+
+    #menu{
+      text-align: center;
+    }
+
+    #imagen_secundaria{
+      flex-direction: column;
+    }
+
+    #imagen_secundaria div{
+      width: 70%;
+      margin:auto;
+      padding-bottom: 20px;
+    }
+    #img_logo{
+      text-align: center;
+    }
+
+    #pie_pagina{
+      display: block;
+    }
+
+    .contenedor_galeria>div{
+      width: 70%;
+      height: auto;
+    }
+
+}
+
+@media (min-width:401px) and (max-width:900px) {
 #contenido{
     width: 100%;
   }
@@ -144,5 +202,17 @@ flex: 1;
   #pie_pagina{
     display: block;
   }
+
+  #imagen_secundaria div{
+    width: 40%;
+    margin:auto;
+    padding-bottom: 20px;
+  }
+
+  .contenedor_galeria>div{
+    width: 70%;
+    height: auto;
+  }
+
 
 }
