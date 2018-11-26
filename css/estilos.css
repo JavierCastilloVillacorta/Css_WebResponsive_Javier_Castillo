@@ -17,19 +17,12 @@ img{
   flex-wrap: wrap;
 }
 #cabecera h1{
-  text-align: center;
+  text-align: left;
   flex-grow: 1;
   text-shadow: 1px 1px 2px  #02010a;
+  margin-left: 10px;
 }
 
-#img_logo{
-  padding: 5px;
-}
-
-#cabecera img{
-  width: 100px;
-  border-radius: 10px;
-}
 #menu{
   padding:0 1%;
 }
@@ -167,9 +160,6 @@ flex: 1;
       margin:auto;
       padding-bottom: 20px;
     }
-    #img_logo{
-      text-align: center;
-    }
 
     #pie_pagina{
       display: block;
@@ -195,9 +185,7 @@ flex: 1;
     text-align: right;
   }
 
-  #img_logo{
-    text-align: center;
-  }
+
 
   #pie_pagina{
     display: block;
